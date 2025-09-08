@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+/* * {
+  outline: 1px solid red !important;
+} */
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+}
+
+body {
+    background-color: #F7F2D5;;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+}
+
+@keyframes slide-up{
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+-animate-slide-up {
+    animation: slide-up 1s ease-in-out forwards;
+}
+
+
+.containerCard{
+    -ms-overflow-style: none;
+    scrollbar-width: none; /* Firefox */
+}
+
+.projectCard {
+    box-shadow: rgba(0, 0, 0, 0.401) 0px 20px 30px -10px;
+}
+
+/* CSS personalizzato per le card responsive */
+
+/* Scroll personalizzato per la descrizione */
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.scrollbar-thumb-gray-400 {
+  scrollbar-color: rgb(156 163 175) transparent;
+}
+
+.scrollbar-track-transparent {
+  scrollbar-color: rgb(156 163 175) transparent;
+}
+
+/* Nasconde scrollbar su webkit browsers */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Troncamento testo con ellipsis */
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Assicura che le card mantengano la loro struttura */
+.projectCard {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Media queries per responsive design */
+@media (max-width: 640px) {
+  .projectCard {
+    min-height: 28rem;
+    max-height: 32rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectCard {
+    width: 16rem; /* w-64 */
+    min-height: 26rem;
+    max-height: 30rem;
+  }
+}
